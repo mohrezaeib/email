@@ -12,6 +12,8 @@ namespace MyApp
                 return false;
             if (!address.Contains("."))
                 return false;
+            if (address.Length < 4 )
+                return false;
             return true;
 
         }
