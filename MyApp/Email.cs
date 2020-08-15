@@ -10,6 +10,8 @@ namespace MyApp
         {
             if (!address.Contains("@"))
                 return false;
+            if (!address.Contains("."))
+                return false;
             return true;
 
         }
