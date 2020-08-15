@@ -16,7 +16,11 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.True(this.email.validate("FF@"));
+            Assert.False(this.email.validate("FrF@"));
+            Assert.False(this.email.validate("rFF."));
+            Assert.False(this.email.validate("r@."));
+            Assert.True(this.email.validate("FF@cc.cc"));
+
         }
     }
 }
